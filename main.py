@@ -29,7 +29,8 @@ s = ttk.Style()
 s.configure("TButton", background="#000000", foreground="#0307ff", font=("Arial", 14))
 
 # Start game function
-def start_game():
+def start_game(filename):
+    #TODO code for .txt file reading
     print("Game started!")
 
 # Start game button
@@ -42,20 +43,22 @@ difficulty_text = ttk.Label(window, text="Choose difficulty", font=("Arial", 14)
 difficulty_text.pack()
 difficulty_text.place(x=40, rely=0.3)
 
+
 # Choose difficulty buttons
-lvl1 = ttk.Button(window, text="Level 1")
+# NB! start_game("word.txt") starts the function. With this there isn´t need for start game button
+lvl1 = ttk.Button(window, text="Level 1", command= lambda: start_game("words_easy.txt"))
 lvl1.pack(ipadx=10, ipady=10, expand=False)
 lvl1.place(x=40, rely=0.4, width=130, height=40)
-lvl2 = ttk.Button(window, text="Level 2")
+lvl2 = ttk.Button(window, text="Level 2", command= lambda: start_game("words_medium.txt"))
 lvl2.pack(ipadx=10, ipady=10, expand=False)
 lvl2.place(x=40, rely=0.5, width=130, height=40)
-lvl3 = ttk.Button(window, text="Level 3")
+lvl3 = ttk.Button(window, text="Level 3", command= lambda: start_game("words_hard.txt"))
 lvl3.pack(ipadx=10, ipady=10, expand=False)
 lvl3.place(x=40, rely=0.6, width=130, height=40)
-lvl4 = ttk.Button(window, text="Level 4")
+lvl4 = ttk.Button(window, text="Level 4", command= lambda: start_game("words_extreme.txt"))
 lvl4.pack(ipadx=10, ipady=10, expand=False)
 lvl4.place(x=40, rely=0.7, width=130, height=40)
-
+# TODO add button and func for words_all.txt file
 
 # Close game button
 exit_button = ttk.Button(window, text="Exit game", command=window.destroy)
