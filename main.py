@@ -30,8 +30,13 @@ s.configure("TButton", background="#000000", foreground="#0307ff", font=("Arial"
 
 # Start game function
 def start_game(filename):
-    #TODO code for .txt file reading
-    print("Game started!")
+    with open(filename, "r") as file:
+        content = file.read()  # Puts all words into single string. example: apple,banana,cherry
+        word_list = [word.strip() for word in content.split(",") if word.strip()]  # Splits string by "," and puts into list ["apple", "banana", "cherry"]
+        random_word = random.choice(word_list)  # Chooses one random word from the list
+    return random_word
+
+    #TODO: code that hides the word and displays underscores for every letter
 
 # Start game button
 # NB! button isn´t needed because level_btn starts the game already
