@@ -1,0 +1,98 @@
+Easy
+
+Elephant, Marshmallow, Mountain, Puzzle, Bicycle, Guitar, Dolphin, Computer, Chocolate, Freedom, Business, Car, Dog, Cat,
+Monkey, Python, Snake, Hippopotamus, Tree, Three, Branch, Bike, Bicycle, Project, Bench, Colosseum, Coffee, Pizza, Pasta,
+Cake, Taxi, Party, Chair, Window, Firehose, Garden, Globe, Alphabet, apple, orange, banana, grape, lemon, peach, melon, cherry, kiwi, plum,
+dog, cat, mouse, horse, sheep, tiger, panda, lion, rabbit, fox,
+car, truck, train, plane, boat, bus, bike, van, scooter, jeep,
+book, pencil, paper, eraser, ruler, marker, pen, crayon, folder, glue,
+house, chair, table, window, door, couch, lamp, bed, clock, mirror,
+sun, moon, cloud, rain, storm, snow, wind, fog, rainbow, sky,
+happy, sad, angry, tired, scared, proud, bored, excited, calm, worried,
+blue, red, green, yellow, pink, black, white, brown, orange, purple,
+cake, bread, rice, pasta, cheese, butter, salad, soup, pizza, meat,
+jump, run, walk, swim, climb, dance, sing, draw, read, write,
+shirt, pants, shoes, socks, hat, coat, dress, scarf, glove, belt,
+water, juice, milk, coffee, tea, soda, honey, sugar, salt, pepper,
+school, park, zoo, beach, mall, farm, store, library, cinema, museum,
+king, queen, prince, princess, knight, dragon, castle, sword, magic, crown,
+fish, crab, shark, whale, turtle, dolphin, squid, seal, coral, octopus,
+desk, phone, light, fan, plug, wire, screen, keyboard, mousepad, cable,
+gold, silver, copper, iron, stone, wood, glass, clay, brick, sand,
+nose, ear, hand, foot, leg, arm, eye, hair, face, teeth,
+robot, alien, ninja, pirate, ghost, clown, fairy, monster, zombie, hero,
+music, movie, artist, singer, actor, writer, dancer, poet, painter, player
+
+
+Medium
+
+abandon, acquire, awkward, bicycle, bizarre, blizzard, bulletin, burglar, canyon, ceiling,
+census, chimney, collapse, compass, compute, conquer, crimson, cyclone, debris, delight,
+demise, dilemma, disease, disdain, diverse, eclipse, elusive, embark, empire, encore,
+endeavor, enhance, equator, ethics, extinct, faction, failure, famine, feline, festive,
+fiction, flicker, fortune, fracture, friction, galaxy, gesture, glacier, gloomy, gossip,
+gourmet, grapple, habitat, hazard, hijack, hostage, hygiene, ignite, illusion, immune,
+impair, imposter, incline, insect, instant, jealous, journey, justice, kernel, kingdom,
+laptop, lawyer, lecture, legend, leisure, library, liquid, logic, lumber, lunar,
+magnify, malice, mansion, mantle, marvel, meadow, mineral, misery, mixture, module,
+momentum, monarchy, monitor, mosaic, motive, muffin, multiply, mutate, mystery, nausea,
+neutral, nominee, notion, nuclear, nurture, obstacle, octopus, opaque, orbit, organ,
+ousted, outlaw, oxford, palace, panic, parcel, patient, patriot, pebble, penalty,
+pepper, perish, phantom, physics, pigeon, pioneer, plastic, podium, poetess, polar,
+pollen, potion, predator, premium, presume, prevail, prison, prophet, protein, puzzle,
+quartz, quest, quiver, radar, ransom, realm, rebound, recruit, refugee, rejoice,
+remedy, remote, reptile, rescue, resign, retreat, revolve, rhythm, riddle, riot,
+ritual, robotic, rotate, rural, safari, savage, scholar, science, season, seize,
+seldom, senate, senior, sequel, serum, shelter, shimmer, silence, skeleton, slumber,
+snorkel, sorcery, souvenir, species, sphere, spiral, sponge, sprinkle, squawk, stadium,
+stamina, staple, statue, stealth, sterile, stumble, summit, symbol, syntax, system
+
+
+Hard
+
+abdicate, abysmal, accolade, acquittal, adjunct, affliction, algorithm, allusion, altruism, ambrosia,
+anachronism, anarchy, anomaly, anthology, antipathy, aperture, apogee, apparition, armoire, articulate,
+aspersion, asteroid, atrophy, auspicious, autonomy, avalanche, axiom, balustrade, barrage, bequeath,
+berate, besiege, bewilder, biopsy, bizarrely, blasphemy, bombastic, brevity, bureaucracy, cacophony,
+cadence, calamity, camouflage, candor, carnivorous, catalyst, celestial, chagrin, charisma, chastise,
+chronicle, clandestine, coagulate, cognition, coherent, colloquial, combustion, commemorate, commodity, complicit,
+concoct, conduit, conflagration, connoisseur, consecrate, conspiracy, contagion, contrite, conundrum, conviction,
+copious, corrode, covert, cranium, crescendo, criterion, cryptic, culpable, curator, debacle,
+debunk, decipher, defector, deleterious, demagogue, demure, denounce, deplore, despot, deterrent,
+diatribe, dichotomy, didactic, digress, diligent, disarray, discern, disheveled, disparity, disseminate,
+dissonance, divergent, dossier, eccentric, eclectic, efface, efficacy, effigy, eloquent, elucidate,
+emancipate, embellish, empathy, empirical, enigma, enthrall, enumerate, ephemeral, equilibrium, erroneous,
+esoteric, estrange, ethereal, euphemism, exacerbate, exalted, exasperate, excoriate, exodus, expedient,
+exuberant, facade, fallacy, fanaticism, fathom, feign, fervent, fiasco, fidelity, figurative,
+flabbergast, flamboyant, fluctuate, forensic, formidable, fortitude, fractious, frenetic, frivolous, futile,
+garner, gauntlet, genealogy, genocide, gesticulate, gluttonous, gratuitous, gregarious, grievance, gullible,
+harbinger, hegemony, heinous, heretic, hiatus, hierarchy, homage, hypocrisy, hypothetical, iconoclast,
+ideology, idiosyncrasy, ignominious, illustrious, immutable, impeccable, implacable, implicit, impregnable, incantation,
+inception, incinerate, incorrigible, indefatigable, indignant, ineffable, inexorable, infallible, inferno, ingratiate,
+inhibit, insatiable, inscrutable, insinuate, insipid, intangible, interloper, interlude, introspect, inundate,
+inversion, iridescent, ironic, jettison, jubilant, juxtapose, labyrinth, lackadaisical, lamentation, lethargic
+
+
+Extreme
+
+absquatulate, accoutrement, acerbity, acquiescence, adumbrate, aegis, agglomeration, agog, alacrity, alliteration,
+anamnesis, anfractuous, anthropocentric, apocryphal, apotheosis, appurtenance, archipelago, argillaceous, arrhythmia, asperity,
+assiduous, autochthonous, balneology, bathyscaphe, bifurcate, borborygmus, breviloquent, bromidrosis, cacography, caliginous,
+callipygian, cantankerous, catachresis, catalepsy, catoptromancy, causticity, celerity, chicanery, circumlocution, circumvallate,
+clandestinity, clepsydra, coelacanth, cognoscenti, collywobbles, commensurate, complaisant, concupiscence, convalescence, coruscate,
+crepuscular, cupidity, dactylology, defenestration, demitasse, desideratum, desuetude, dilapidation, discombobulate, disconsolate,
+disenfranchise, disingenuous, disquisition, dithyramb, dodecahedron, dourine, dragoman, ebullience, ecdysiast, efflorescence,
+effulgent, egregious, eleemosynary, elocution, emolument, encomium, enervation, ensorcelled, enunciation, ephemerality,
+epistolary, epistemology, equanimity, eructation, eschatology, espieglerie, estivation, ethnoentomology, euphuism, exsanguinate,
+extemporaneous, faineant, farrago, fecundity, felicity, fescennine, fiduciary, floccinaucinihilipilification, fractiousness, fuliginous,
+furbelow, gamopetalous, gasconade, gelatinous, gnathonic, gourmandize, grandiloquent, gymnosophist, gyre, hagiography,
+halcyon, hebetude, hecatomb, hegemony, hemidemisemiquaver, heptarchy, hermeneutics, heterodoxy, heuristic, hiatus,
+hirsute, honorificabilitudinitatibus, hortatory, hubris, hyperbaton, hyperbole, ichthyology, ignis fatuus, imbroglio, impugn,
+inchoate, incunabula, indefeasible, indefatigability, indelible, indolent, inefficacious, infundibulum, ingravescent, inimical,
+insouciance, interregnum, irascible, irrefragable, isthmus, jejune, juxtaposition, kakistocracy, kerfuffle, lackey,
+lachrymose, lagniappe, laryngeal, legerdemain, lenticular, lethologica, logorrhea, loquacious, lucubration, lugubrious,
+magniloquent, maladroit, malfeasance, manifold, mastodon, mendacity, meretricious, misanthrope, mithridate, mollify,
+monadnock, moribund, multifarious, multitudinous, myrmidon, neologism, nepotism, nihilism, nonplussed, obfuscation,
+objurgate, obsequious, obstreperous, occlusion, omnipotence, omphaloskepsis, onomatopoeia, orrery, ossuary, ostentation,
+palimpsest, panacea, pandemonium, panegyric, parallax, parsimonious, pastiche, peccadillo, persiflage, phantasmagoria,
+phlogiston, picayune, pleonasm, pneumonoultramicroscopicsilicovolcanoconiosis, polyhistor, prestidigitation, proboscis, prolegomenon, prosaic, pseudopseudohypoparathyroidism
