@@ -34,30 +34,32 @@ def start_game(filename):
     print("Game started!")
 
 # Start game button
-start_game_button = ttk.Button(window, text="Start Game", command="start_game")
-start_game_button.pack(ipadx=10, ipady=10, expand=False)
-start_game_button.place(x=40, rely=0.1, width=150, height=50)  # Button placement and size
+# NB! button isn´t needed because level_btn starts the game already
+#start_game_button = ttk.Button(window, text="Start Game", command="start_game")
+#start_game_button.pack(ipadx=10, ipady=10, expand=False)
+#start_game_button.place(x=40, rely=0.1, width=150, height=50)  # Button placement and size
+
 
 # Text above difficulty buttons
 difficulty_text = ttk.Label(window, text="Choose difficulty", font=("Arial", 14))
 difficulty_text.pack()
-difficulty_text.place(x=40, rely=0.3)
+difficulty_text.place(x=40, rely=0.1)
 
 
 # Choose difficulty buttons
 # NB! start_game("word.txt") starts the function. With this there isn´t need for start game button
-lvl1 = ttk.Button(window, text="Level 1", command= lambda: start_game("words_easy.txt"))
+lvl1 = ttk.Button(window, text="Easy", command= lambda: start_game("words_easy.txt"))
 lvl1.pack(ipadx=10, ipady=10, expand=False)
-lvl1.place(x=40, rely=0.4, width=130, height=40)
-lvl2 = ttk.Button(window, text="Level 2", command= lambda: start_game("words_medium.txt"))
+lvl1.place(x=40, rely=0.2, width=130, height=40)
+lvl2 = ttk.Button(window, text="Medium", command= lambda: start_game("words_medium.txt"))
 lvl2.pack(ipadx=10, ipady=10, expand=False)
-lvl2.place(x=40, rely=0.5, width=130, height=40)
-lvl3 = ttk.Button(window, text="Level 3", command= lambda: start_game("words_hard.txt"))
+lvl2.place(x=40, rely=0.3, width=130, height=40)
+lvl3 = ttk.Button(window, text="Hard", command= lambda: start_game("words_hard.txt"))
 lvl3.pack(ipadx=10, ipady=10, expand=False)
-lvl3.place(x=40, rely=0.6, width=130, height=40)
-lvl4 = ttk.Button(window, text="Level 4", command= lambda: start_game("words_extreme.txt"))
+lvl3.place(x=40, rely=0.4, width=130, height=40)
+lvl4 = ttk.Button(window, text="Extreme", command= lambda: start_game("words_extreme.txt"))
 lvl4.pack(ipadx=10, ipady=10, expand=False)
-lvl4.place(x=40, rely=0.7, width=130, height=40)
+lvl4.place(x=40, rely=0.5, width=130, height=40)
 # TODO add button and func for words_all.txt file
 
 # Close game button
