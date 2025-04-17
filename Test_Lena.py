@@ -2,7 +2,7 @@ import random
 import tkinter as tk
 from tkinter import ttk, messagebox
 
-# Mängu loogika klass
+# Mängu loogika klass (jätka sama)
 class HangmanGame:
     def __init__(self):
         self.lives = 6
@@ -57,7 +57,7 @@ class HangmanGame:
     def get_chosen_word(self):
         return self.chosen_word
 
-# Mängu visuaalne klass
+# Mängu visuaalne klass (kasuta seda versiooni)
 class HangmanDisplay:
     def __init__(self, master, game):
         self.master = master
@@ -68,14 +68,36 @@ class HangmanDisplay:
         self.word_display.place(x=550, y=20)
         self.message_label = ttk.Label(master, text="Alusta mängu!", font=("Arial", 16))
         self.message_label.place(x=550, y=320)
-        self.draw_initial_hangman() # Joonistame alguses tühja poomispuu
+        self.hangman_images = []
+        for i in range(7):
+            try:
+                img = tk.PhotoImage(file=f"./Images/TikiMan1HB{i + 1}.png")
+                self.hangman_images.append(img)
+                print(f"Pilt TikiMan1HB{i + 1}.png laaditi edukalt.")
+            except tk.TclError as e:
+                messagebox.showerror("Viga pildi laadimisel", f"Ei saanud laadida pilti TikiMan1HB{i + 1}.png: {e}")
+                self.hangman_images.append(None)  # Lisa None, et listi pikkus oleks õige
+
+        print(f"Piltide laadimine tulemus: {self.hangman_images}")
+
+        # Loome pildi canvas'ile alles pärast canvas'i loomist
+        if self.hangman_images[0]:
+            self.hangman_image_on_canvas = self.canvas.create_image(150, 150, image=self.hangman_images[0])
+        else:
+            self.hangman_image_on_canvas = None
+
+        self.guessed_letters_label = ttk.Label(master, text="Pakutud tähed:", font=("Arial", 12))
+        self.guessed_letters_label.place(x=700, y=80)
+        self.guessed_letters_display = ttk.Label(master, text="", font=("Courier", 14))
+        self.guessed_letters_display.place(x=700, y=100)
+        self.update_hangman_image()
 
     def update_word(self):
         self.word_display.config(text=f"Sõna: {self.game.get_display_word()}")
 
     def update_lives(self):
         self.message_label.config(text=f"Elud: {self.game.get_lives()}")
-        self.draw_hangman()
+        self.update_hangman_image()
 
     def show_win_message(self):
         self.message_label.config(text=f"Võitsid! Sõna oli: {self.game.get_chosen_word()}")
@@ -83,31 +105,21 @@ class HangmanDisplay:
     def show_lose_message(self):
         self.message_label.config(text=f"Kaotasid! Sõna oli: {self.game.get_chosen_word()}")
 
-    def draw_initial_hangman(self):
-        # Joonista siia tühja poomispuu (hangman_images[0] funktsionaalsus)
-        self.canvas.delete("all")
-        # Näide lihtsast poomispuust:
-        self.canvas.create_line(50, 250, 250, 250) # Alus
-        self.canvas.create_line(100, 250, 100, 50)  # Post
-        self.canvas.create_line(100, 50, 200, 50)   # Risttala
-        self.canvas.create_line(200, 50, 200, 70)   # Köis
-
-    def draw_hangman(self):
+    def update_hangman_image(self):
         lives_left = self.game.get_lives()
-        self.canvas.delete("all") # Puhastame eelmise joonise
-        self.draw_initial_hangman() # Joonistame alati baasi
+        index = 6 - lives_left
+        print(f"Uuendatakse pilti. Elud: {lives_left}, indeks: {index}")
+        if 0 <= index < len(self.hangman_images):
+            if self.hangman_image_on_canvas:
+                print(f"Uuendatakse pilti indeksiga {index}")
+                self.canvas.itemconfig(self.hangman_image_on_canvas, image=self.hangman_images[index])
+            else:
+                print("Canvas element pildi jaoks pole veel loodud!")
+        else:
+            print(f"Vigane pildi indeks: {index}")
 
-        parts = [
-            lambda c: c.create_oval(170, 70, 210, 110),             # pea (kui 5 elu alles)
-            lambda c: c.create_line(190, 110, 190, 180),            # keha (kui 4 elu alles)
-            lambda c: c.create_line(190, 130, 160, 160),           # vasak käsi (kui 3 elu alles)
-            lambda c: c.create_line(190, 130, 220, 160),           # parem käsi (kui 2 elu alles)
-            lambda c: c.create_line(190, 180, 160, 220),           # vasak jalg (kui 1 elu alles)
-            lambda c: c.create_line(190, 180, 220, 220),           # parem jalg (kui 0 elu alles)
-        ]
-
-        for i in range(6 - lives_left):
-            parts[i](self.canvas)
+    def update_guessed_letters(self):
+        self.guessed_letters_display.config(text=", ".join(sorted(list(self.game.guessed_letters))))
 
 # Peamine rakenduse klass
 class HangmanApp:
@@ -117,12 +129,12 @@ class HangmanApp:
         master.geometry("1000x600")
         master.resizable(False, False)
         try:
-            master.iconbitmap("./images/icon.ico")
+            master.iconbitmap("./Images/icon.ico")
         except tk.TclError:
             pass # Ikoni laadimine ei ole kriitiline
 
         self.game = HangmanGame()
-        self.display = HangmanDisplay(master, self.game)
+        self.display = HangmanDisplay(master, self.game) # Loome HangmanDisplay objekti
 
         self.message_label_top = ttk.Label(master, text="Vali raskusaste", font=("Arial", 14))
         self.message_label_top.place(x=40, rely=0.1)
@@ -144,10 +156,12 @@ class HangmanApp:
         master.bind('<Return>', lambda event: self.on_guess()) # Võimaldab Enter-klahviga pakkuda
 
     def start_new_game(self, filename):
+        print(f"Alustatakse uut mängu failiga: {filename}")
         if self.game.start_game(filename):
             self.display.update_word()
             self.display.update_lives()
-            self.guess_entry.config(state=tk.NORMAL) # Lubame uuesti pakkuda
+            self.display.update_guessed_letters()
+            self.guess_entry.config(state=tk.NORMAL)
             self.guess_entry.delete(0, tk.END)
             self.display.message_label.config(text="Mäng algas! Paku tähte.")
 
@@ -155,18 +169,24 @@ class HangmanApp:
         letter = self.guess_entry.get()
         self.guess_entry.delete(0, tk.END)
         if letter:
-            if self.game.guess_letter(letter[0]):
+            print(f"Pakutud täht: {letter}")
+            was_correct = self.game.guess_letter(letter[0])
+            if was_correct:
+                print("Täht oli õige.")
                 self.display.update_word()
+                self.display.update_guessed_letters()
                 if self.game.is_won():
                     self.display.show_win_message()
-                    self.guess_entry.config(state=tk.DISABLED) # Keelame peale võitu pakkumise
+                    self.guess_entry.config(state=tk.DISABLED)
             else:
+                print("Täht oli vale.")
                 self.display.update_lives()
+                self.display.update_guessed_letters()
                 if self.game.is_lost():
                     self.display.show_lose_message()
-                    self.guess_entry.config(state=tk.DISABLED) # Keelame peale kaotust pakkumise
+                    self.guess_entry.config(state=tk.DISABLED)
 
 if __name__ == "__main__":
     window = tk.Tk()
-    app = HangmanApp(window)
+    app = HangmanApp(window) # Loome HangmanApp objekti
     window.mainloop()
