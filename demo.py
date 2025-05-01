@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 import random
-from PIL import Image, ImageTk, ImageDraw, ImageFont
+from PIL import Image, ImageTk, ImageDraw, ImageFont # pildi jaoks importitud
 import os
 
 
@@ -132,7 +132,7 @@ class GamePage(tk.Frame):
 
         self.bind("<<ShowFrame>>", self.on_show_frame)
 
-    def update_hangman_image(self):
+    def update_hangman_image(self): # pildi meetod
         self.canvas.delete("all")
         try:
             if self.wrong_guesses == 0:
