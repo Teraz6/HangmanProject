@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 import random
+from PIL import Image, ImageTk, ImageDraw, ImageFont
 
 
 class HangmanApp(tk.Tk):
@@ -105,6 +106,11 @@ class GamePage(tk.Frame):
                                          font=("Arial", 14))
         self.remaining_label.pack(side="top")
 
+        self.canvas = tk.Canvas(self, width=300, height=300)
+        self.canvas.pack(pady=10)
+        self.hangman_image = None
+        self.update_hangman_image()  # Kuvab esialgse pildi mängu alguses
+
         def validate_input(p):
             return p == "" or (len(p) == 1 and p.isalpha())
 
@@ -124,6 +130,36 @@ class GamePage(tk.Frame):
         guess_button.pack(side="bottom", anchor="se", padx=10)
 
         self.bind("<<ShowFrame>>", self.on_show_frame)
+
+    def update_hangman_image(self): # pildi meetod
+        self.canvas.delete("all")
+        try:
+            if self.wrong_guesses == 0:
+                img = Image.open("./Images/TikiMan0.png")
+            elif self.wrong_guesses == 1:
+                img = Image.open("./Images/TikiMan1.png")
+            elif self.wrong_guesses == 2:
+                img = Image.open("./Images/TikiMan2.png")
+            elif self.wrong_guesses == 3:
+                img = Image.open("./Images/TikiMan3.png")
+            elif self.wrong_guesses == 4:
+                img = Image.open("./Images/TikiMan4.png")
+            elif self.wrong_guesses == 5:
+                img = Image.open("./Images/TikiMan5.png")
+            elif self.wrong_guesses >= 6:
+                img = Image.open("./Images/TikiMan6.png")
+            else:
+                img = None
+
+            if img:
+                img = img.resize((300, 300), Image.Resampling.LANCZOS)
+                self.hangman_image = ImageTk.PhotoImage(img)
+                self.canvas.create_image(150, 150, image=self.hangman_image)
+
+        except FileNotFoundError as e:
+            print(f"Viga: Pildifaili ei leitud! {e}")
+        except Exception as e:
+            print(f"Viga pildi laadimisel: {e}")
 
     def on_show_frame(self, event):
         if self.word_list:
@@ -154,6 +190,7 @@ class GamePage(tk.Frame):
 
         if guess not in self.chosen_word:
             self.wrong_guesses += 1
+            self.update_hangman_image()  # uuendab pildi iga vale vastusega
 
         self.update_displayed_word()
         self.update_remaining_attempts()
