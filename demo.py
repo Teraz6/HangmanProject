@@ -150,7 +150,7 @@ class GamePage(tk.Frame):
             elif self.wrong_guesses >= 6:
                 img = Image.open("./Images/TikiMan6.png")
             else:
-                img = None 
+                img = None
 
             if img:
                 img = img.resize((300, 300), Image.Resampling.LANCZOS)
