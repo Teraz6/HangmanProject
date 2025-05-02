@@ -152,6 +152,7 @@ class GamePage(tk.Frame):
             else:
                 img = None
 
+
             if img:
                 img = img.resize((300, 300), Image.Resampling.LANCZOS)
                 self.hangman_image = ImageTk.PhotoImage(img)
