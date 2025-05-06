@@ -132,6 +132,18 @@ class GamePage(tk.Frame):
         self.bind("<<ShowFrame>>", self.on_show_frame)
 
     def update_hangman_image(self): # pildi meetod
+        """
+        Updates the hangman image on the canvas based on the number of wrong guesses.
+
+        Loads the corresponding image (TikiMan0.png to TikiMan6.png) from the ./Images/
+        folder and displays it resized to 300x300 pixels. Clears the previous image.
+
+        :return:
+        Exceptions:
+        FileNotFoundError: If the corresponding image file cannot be found.
+        Exception: Catches and reports any other errors that occur during image loading.
+        """
+
         self.canvas.delete("all")
         try:
             if self.wrong_guesses == 0:
@@ -208,6 +220,9 @@ class GamePage(tk.Frame):
             return
 
     def update_displayed_word(self):
+        """
+        Updates the word label to show correctly guessed letters and underscores for the rest.
+        """
         displayed = " ".join([
             letter if letter in self.previous_guesses else "_"
             for letter in self.chosen_word
@@ -237,6 +252,15 @@ class EndPage(tk.Frame):
         exit_btn.pack(pady=10)
 
     def set_result(self, won, word):
+        """
+        Displays the result message at the end of the game.
+
+        If the player has won, shows a green "You Won!" message and clears the word display.
+        If the player has lost, shows a red "You Lost!" message and reveals the correct word.
+
+        :param won: Boolean indicating if the player has won.
+        :param word: The correct word to be revealed if the player lost.
+        """
         if won:
             self.message_label.config(text="🎉 You Won! 🎉", foreground="green")
             self.word_label.config(text="")
