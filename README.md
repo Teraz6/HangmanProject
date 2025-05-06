@@ -6,8 +6,12 @@ Kasutaja peab ära arvama sõna, sisestades kas tähti või otse sõna. Mäng l�
 
 Kasutajalugu:
 
-1. Kasutaja saab valida raskusastme mängu jaoks, kui raskuaste on valitud ja selle peale klikkates alustatakse mängu.
-2. Sisestab tähti või sõna, iga vale sõna või vale tähe sisestamisel, tekib üks kehaosa Hangmani mängus. Kui mängijal tekib 6 viga (kehaosad: pea, keha, vasak käsi, parem käsi, vasak jalg ning parem jalg), siis saab mäng läbi või kui mängija arvab ära õigesti sõna, siis saab ka mäng läbi.
+1. Kasutaja saab valida raskusastme mängu jaoks, kui raskuaste on valitud ja selle peale klikkates alustatakse mängu. Esilehel saab ka kohe välja logida.
+   
+2. Sisestad tähti või sõna – iga vale sõna või vale tähe sisestamisel ilmub üks kehaosa Hangmani mängus. Kui mängijal koguneb 6 viga (kehaosad: pea, keha, vasak käsi, parem käsi, vasak jalg ja parem jalg), siis saab mäng läbi.
+Mäng lõppeb ka siis, kui mängija arvab sõna õigesti ära. Kasutaja sisestab tähti klaviatuuril ning vajutab seejärel nuppu "Guess", et sisend kinnitada. Kui täht on õige, kuvatakse see vastavas kohas sõnas. Kui täht on vale,
+lisandub joonisele üks kehaosa. Mängus kuvatakse ka allesjäänud "elud".
+
 3. Olenevalt mängu 2.punktis, kuvatakse kasutajale vastav lõppus teade, kas "GAME OVER" või "YOU WIN" ning seejärel, kui soovib mängija jätkata saab Ta "Start Game" vajutades minna esilehel ning vastavalt alustada punkt 1-st.
 
 Prototüüb: https://www.figma.com/design/LaaLe6n2cGjWLstfQ5DHIW/Untitled?node-id=0-1&t=m21JdlxuiSHz1BUr-1
