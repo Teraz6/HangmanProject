@@ -129,7 +129,7 @@ class GamePage(tk.Frame):
         self.guess_info_display = ttk.Label(self, text="Guessed letters", font=("Arial", 14))
         self.guess_info_display.pack(side="bottom", anchor="sw", padx=10, pady=10)
 
-        guess_button = ttk.Button(self, text="Guess", command=self.display_guess)
+        guess_button = tk.Button(self, text="Guess", font=("Arial", 18), height=2, width=10,command=self.display_guess)
         guess_button.pack(side="bottom", anchor="se", padx=10)
 
         self.bind("<<ShowFrame>>", self.on_show_frame)
