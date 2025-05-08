@@ -9,10 +9,10 @@ class HangmanApp(tk.Tk):
     def __init__(self):
         tk.Tk.__init__(self)
 
-        self.title("Hangman")
-        self.geometry("800x600")
-        self.minsize(600, 400)
-        self.maxsize(1000, 600)
+        self.title("Hangman")  # Window title
+        self.geometry("800x600") # Window default size
+        self.minsize(600, 400)  # Window min size
+        self.maxsize(1000, 600)  # Window max size
         self.iconbitmap("./Images/Icon.ico")  # Optional icon path
 
         self.word_list = None
@@ -25,7 +25,7 @@ class HangmanApp(tk.Tk):
 
         self.frames = {}
 
-        for F in (StartPage, GamePage, EndPage):
+        for F in (StartPage, GamePage, EndPage):  # Creates a new frame for each page.
             frame = F(container, self)
             self.frames[F] = frame
             frame.grid(row=0, column=0, sticky="nsew")
@@ -47,6 +47,7 @@ class HangmanApp(tk.Tk):
 
 
 class StartPage(tk.Frame):
+    """ Defines startPage layout and startGame function."""
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
@@ -89,6 +90,7 @@ class StartPage(tk.Frame):
 
 
 class GamePage(tk.Frame):
+    """ Displays gameplay and game logic."""
     def __init__(self, parent, controller, word_list=None):
         tk.Frame.__init__(self, parent)
         self.controller = controller
@@ -112,6 +114,7 @@ class GamePage(tk.Frame):
         self.update_hangman_image()  # Kuvab esialgse pildi mängu alguses
 
         def validate_input(p):
+            """ Allows only letter to be inserted and displays as lowercase letters. """
             return p == "" or (len(p) == 1 and p.isalpha())
 
         validate_command = (self.register(validate_input), "%P")
@@ -188,6 +191,7 @@ class GamePage(tk.Frame):
         self.guess_entry.delete(0, tk.END)
 
     def display_guess(self):
+        """ Show guessed letters and checks if guessed letter is in the chosen word."""
         guess = self.guess_entry.get().lower()
         self.guess_entry.delete(0, tk.END)
 
@@ -236,6 +240,7 @@ class GamePage(tk.Frame):
 
 class EndPage(tk.Frame):
     def __init__(self, parent, controller):
+        """ Displays "play again" and "exit game" button when game has finished."""
         tk.Frame.__init__(self, parent)
         self.controller = controller
 
