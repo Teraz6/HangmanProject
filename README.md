@@ -15,3 +15,7 @@ lisandub joonisele üks kehaosa. Mängus kuvatakse ka allesjäänud "elud".
 3. Olenevalt mängu 2.punktis, kuvatakse kasutajale vastav lõppus teade, kas "GAME OVER" või "YOU WIN" ning seejärel, kui soovib mängija jätkata saab Ta "Start Game" vajutades minna esilehel ning vastavalt alustada punkt 1-st.
 
 Prototüüb: https://www.figma.com/design/LaaLe6n2cGjWLstfQ5DHIW/Untitled?node-id=0-1&t=m21JdlxuiSHz1BUr-1
+
+https://docs.google.com/document/d/1eMwc8Nhn7cbFUUrgUiJkfvD2EmBgFCJApt-d8vpD23c/edit?usp=sharing - dokumentatsioon
+
+https://docs.google.com/presentation/d/1u5ZV_eRjNFELKjItmf-zXg8UjQwRnL8m0K-rMPTztC8/edit?usp=sharing - esitlus
